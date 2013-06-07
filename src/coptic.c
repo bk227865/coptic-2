@@ -146,7 +146,7 @@ void handle_minute_tick(AppContextRef ctx, PebbleTickEvent *t)
   
     // if the hour changes update the datestring for possible changes
     
-    if (t->units_changed == HOUR_UNIT) update_dates(*t->tick_time);
+    if (t->units_changed & HOUR_UNIT) update_dates(*t->tick_time);
     
     
         
